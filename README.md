@@ -47,15 +47,15 @@ hand-entered ever reaches the output.
 
 ```bash
 python3 read_hand_positions.py score.pdf --think=true
-python3 read_hand_positions.py score.pdf --think=true --model gemma4:e4b --host http://localhost:11434
+python3 read_hand_positions.py score.pdf --think=true --model gemma4:12b --host http://localhost:11434
 python3 read_hand_positions.py score.pdf --think=true --no-images --limit 10
 ```
 
 Needs [Ollama](https://ollama.com) running with a vision model pulled. The
-model name is matched loosely, so `Gemma4:e4b` finds `gemma4:e4b`. Thinking is
-switched on for models that support it, with a token budget large enough for
-the reasoning *and* the answer — otherwise the model spends the whole budget
-reasoning and returns nothing. Answers are constrained by a JSON schema.
+model is `gemma4:12b`. Thinking is switched on for models that support it,
+with a token budget large enough for the reasoning *and* the answer 
+— otherwise the model spends the whole budget reasoning and returns nothing. 
+Answers are constrained by a JSON schema.
 
 **The model is never asked to read music.** A small model is poor at telling a
 notehead's staff degree from a picture, and letting it choose pitches freely
