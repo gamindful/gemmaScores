@@ -89,13 +89,13 @@ def main():
 
     firm = sum(1 for p in positions if p["quality"] == "firm")
     html = page.render(positions, {"bars": n_bars}, rows, summary)
-    with open(args.html, "w") as fh:
+    with open(args.html, "w", encoding="utf-8") as fh:
         fh.write(html)
     print(f"{args.html}: {len(positions)} positions over {n_bars} bars "
           f"({firm} corroborated, {len(positions) - firm} unconfirmed)")
 
     if args.json:
-        with open(args.json, "w") as fh:
+        with open(args.json, "w", encoding="utf-8") as fh:
             json.dump(positions, fh, indent=1)
         print(f"{args.json}: written")
     return 0

@@ -2,7 +2,8 @@
 
 import json
 
-HEAD = """<title>Moonlight Hand Positions</title>
+HEAD = """<meta charset="utf-8">
+<title>Moonlight Hand Positions</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap">
 <style>
